@@ -33,17 +33,19 @@ void zadanie3() {
 
 void zadanie_samomy()
 {
-    int year,num1,result;
-    year = 2022;
-    puts("Введите год вашего рождения:");
+    int year,num1,num2,num3,result;
+    year = 20220928;
+    puts("Дату рождения записать в виде == 00.00.0000");
+    puts("Введите число вашего рождения:");
     scanf("%d", &num1);
-    result = year - num1;
-    if ((result >20 ) && (result%10==1,2,3,4) || (result==1,2,3,4))
-        printf("Вам %d года", result);
-    else
-        printf("Вам %d лет", result);
+    puts("Введите номер месяца вашего рождения:");
+    scanf("%d", &num2);
+    puts("Введите год вашего рождения:");
+    scanf("%d", &num3);
+    int date = num3*10000+num2*100+num1;
+    result = (year - date)/10000;
+    printf("%d",result);
 }
-
 
 void main()
 {
