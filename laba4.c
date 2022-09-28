@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
 
-void zadanie1() {
+void zadanie1() 
+{
 	char c = '!';
 	int i = 2;
 	float f = 3.14f;
@@ -24,14 +25,16 @@ void zadanie1() {
 	scanf("%lf", &d);
 	printf("%lf \n", d);
 }
-void zadanie2() {
+void zadanie2() 
+{
 	int a = 11, b = 3;
 
 	printf("%i %f %f \n", ((int)a/(int)b), ((float)a/(float)b), ((double)a/(double)b));
 
 }
 
-void zadanie3() {
+void zadanie3() 
+{
 	int n; 
 	puts("Введите число");
 	scanf("%i", &n);
@@ -39,21 +42,27 @@ void zadanie3() {
 	printf("\nЧисло наоборот: %d%d%d", n % 10, ((n % 100) / 10), n / 100);
 }
 
+
 void individual() 
 {
- int distance,x,rolls;
+    int distance,x,rolls,price_r,price_f;
     puts("Введите число - Стоимость 1 галлона бензина");
 	scanf("%d", &x);
 	rolls = 390 / 15; //кол-во галлонов на Роллс-Ройсе
 	printf("От Лондона до Эдинбурга на машине Роллс-Ройс потребуется %d галлонов", rolls);
-	printf("\nСтоиость поездки на Роллс-Ройсе составляет %d фунтов",26*x);
+	price_r = 26*x;
 	
 	float ford ; 
 	ford = roundf(390.0/36);//кол-во галлонов на Форде
 	printf("\nОт Лондона до Эдинбурга на машине Форд-Эскорт потребуется %.0f галлонов",ford);
-    
+	price_f = ford*x;
+	printf("\n-------------------------------------------------------------------------------------------------");
+	printf("\nСтоиость поездки на Роллс-Ройсе составит %d фунтов",price_r);
+	printf("\nЕсли он поедет на Форд-Эскорт, он сэкономит %d фунтов",price_r - price_f);
     
 }
+
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
