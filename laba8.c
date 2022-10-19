@@ -21,18 +21,19 @@ void zadanie2()
 {
 	float pi = 3.14;
 	double y;
-	
-	puts("--------------------");
-	printf("|  x  |    f(x)    |\n");
-	puts("--------------------");
-	for(int x = 1;x<=3;x++) {
+	float a = 1, b = 3, g = 0.1;
+	puts("----------------------");
+	printf("|   x   |    f(x)    |\n");
+	puts("----------------------");
+	for(float x = 1;x<=3;x+=g) {
 	  y = x*x - cos(pi*x)*cos(pi*x);
-	  printf("|  %i  |  %f  | \n", x,y);
+	  printf("|  %.1f  |  %f  | \n", x,y);
 	}
-	puts("--------------------");
+	puts("----------------------");
 	
 
 }
+
 
 
 void main()
