@@ -16,6 +16,25 @@ void zadanie1() {
 
 }
 
+
+void zadanie2() 
+{
+	float pi = 3.14;
+	double y;
+	
+	puts("--------------------");
+	printf("|  x  |    f(x)    |\n");
+	puts("--------------------");
+	for(int x = 1;x<=3;x++) {
+	  y = x*x - cos(pi*x)*cos(pi*x);
+	  printf("|  %i  |  %f  | \n", x,y);
+	}
+	puts("--------------------");
+	
+
+}
+
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
