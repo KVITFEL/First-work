@@ -87,37 +87,38 @@ void zadanie2() {
 
 void zadanie3()
 {
-    char k;
-    scanf("%c",&k);
+    int k;
+    scanf("%d",&k);
     switch (k)
     {
-    case '0':
-        printf("В программе найдено %c ошибок", k);
+    case 0:
+        printf("В программе найдено 0 ошибок");
         break;
     
-    case '1':
-        printf("В программе найдено %c ошибка", k);
+    case 1:
+        printf("В программе найдено 1 ошибка");
         break;
     
-    case '2':
-        printf("В программе найдено %c ошибки", k);
+    case 2:
+        printf("В программе найдено 2 ошибки");
         break;
         
-    case '3':
-        printf("В программе найдено %c ошибки", k);
+    case 3:
+        printf("В программе найдено 3 ошибки");
         break;
         
-    case '4':
-        printf("В программе найдено %c ошибки", k);
+    case 4:
+        printf("В программе найдено 4 ошибки");
         break;
-   
+    
     default:
-        printf("В программе найдено %c ошибок", k);
+        printf("В программе найдено %d ошибок", k);
         break;
 
 }
 
 }
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
