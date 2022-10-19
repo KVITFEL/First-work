@@ -35,6 +35,17 @@ void zadanie2()
 }
 
 
+void zadanie3()
+{
+ double sum=0.0;
+	for(double x = 1; x <=2; x += 0.1){
+	    //printf("%f\n",sum);
+	    sum = sum + sin(x);
+	
+	}
+printf("Сумма синусов = %f", sum);
+}	
+
 
 void main()
 {
