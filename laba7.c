@@ -56,6 +56,35 @@ switch (c)
 }
 
 
+void zadanie2()
+{
+    float x,y;
+    char c;
+    scanf("Введите первое значение, знак операции, второе значение:%f%c%f", &x, &c, &y);
+    
+    switch(c)
+    {
+    case('+'):
+        printf("Сумма= %f", x+y);
+        break;
+    case('-'):
+        printf("Сумма= %f", x-y);
+        break;
+    case('*'):
+        printf("Сумма= %f", x*y);
+        break;
+    case('/'):
+        printf("Сумма= %f", x/y);
+        break;
+        
+    default:
+		printf("err");
+
+
+  }
+
+}
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
