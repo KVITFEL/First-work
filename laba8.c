@@ -2,17 +2,17 @@
 #include <locale.h>
 #include <math.h>
 
-void zadanie1()
-{
-    int m,n,i,s;
-    scanf("%d", &n);
-    scanf("%d", &m);
-    for (int i=m, s=0;i>=n;i--){
-        s+=i;
-        printf("выполнено %d раз", i+1);
-    }
-    printf("результат %d", s);
-    
+void zadanie1() {
+	int n,m;
+	scanf("%d %d", &n, &m);
+	int s = 0, r = 0;
+
+	for (int i = m; i >= n; i--) {
+		s += i;
+		r++;
+	}
+	printf("выполнено - %d раз \n", r);
+	printf("результат =  %d \n", s);
 
 }
 
