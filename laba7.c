@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
 
 void zadanie1()
 {
@@ -56,33 +57,31 @@ switch (c)
 }
 
 
-void zadanie2()
-{
-    float x,y;
-    char c;
-    scanf("Введите первое значение, знак операции, второе значение:%f%c%f", &x, &c, &y);
-    
-    switch(c)
-    {
-    case('+'):
-        printf("Сумма= %f", x+y);
-        break;
-    case('-'):
-        printf("Сумма= %f", x-y);
-        break;
-    case('*'):
-        printf("Сумма= %f", x*y);
-        break;
-    case('/'):
-        printf("Сумма= %f", x/y);
-        break;
-        
-    default:
+void zadanie2() {
+	float x, y;
+	char c;
+
+	scanf("%f%c%f", &x, &c, &y);
+	switch (c)
+	{
+	case ('+'):
+		printf("%.4f", x + y);
+		break;
+	case ('-'):
+		printf("%.4f", x - y);
+		break;
+	case ('/'):
+		printf("%.4f", x / y);
+		break;
+	case ('*'):
+		printf("%.4f", x * y);
+		break;
+	case ('^'): // vozvedenie v stepen'
+		printf("%.4f", pow(x, y));
+		break;
+	default:
 		printf("err");
-
-
-  }
-
+	}
 }
 
 void main()
