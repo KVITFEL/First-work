@@ -7,17 +7,16 @@
 void zadanie1() {
 	int row, col;
 	printf("\n");
-	for (row = 1; row <= ROW;row++) {
-		for (col = 1; col <= COL;col++)
-			printf("%i+%i=%4d",row,col,col+row);
+	for (row = 1; row <= ROW; row++) {
+		for (col = 1; col <= COL; col++)
+			printf("%d + %d = %2d    ", row, col, col + row);
 
 
 		printf("\n");
 	}
-	
 
+	printf("\n");
 }
-
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
