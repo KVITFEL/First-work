@@ -17,6 +17,22 @@ void zadanie1() {
 
 	printf("\n");
 }
+
+
+void zadanie2() {
+	int r = 3, i, j;
+	for (i = -r; i <= r; i++ ) {
+		for (j = -r; j <= r; j++)
+			if ()
+				printf("*");
+			else(" ");
+		printf("\n");
+	}
+	return 0;
+	
+}
+
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
