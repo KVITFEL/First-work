@@ -66,6 +66,26 @@ void zadanie4() {
 	}
 
 }
+
+
+void zadaniehz()
+{
+    int a = 9;
+    int ch = '*';
+    
+    for(int i = 1; i <= a; i++)
+    {
+        for(int j = 1; j <= a; j++)
+            if(j == a || i == a || i == a - j + 1)
+                putchar(ch);
+            else
+                putchar(' ');
+        putchar('\n');        
+    }
+    
+    return 0;
+}
+
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
