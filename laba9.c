@@ -20,16 +20,17 @@ void zadanie1() {
 
 
 void zadanie2() {
-	int r = 3, i, j;
-	for (i = -r; i <= r; i++ ) {
-		for (j = -r; j <= r; j++)
-			if ()
-				printf("*");
-			else(" ");
+
+	int row, col, count = 0;
+	printf("\n");
+	for (row = 1; row <= 5; ++row) {
+		count = 0;
+		for (col = 1; col <= 5; col++) {
+			((col % 2 != 0) && (col != row)) ? printf("%5d", row-1) : printf("%5d", row - col);
+			if ((row - col) == 0) break;
+		}
 		printf("\n");
 	}
-	return 0;
-	
 }
 
 
