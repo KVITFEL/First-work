@@ -12,9 +12,14 @@ void zadanie1()
 	else
 		printf("Считает не високосным - %d ", yeas);
 
+}
 
 
 
+void zadanie2() 
+{
+   	double x = 13;
+	printf("%.1f", x <= 13 ? (pow(-x, 3) + 9) : (-(3/ (x+1))));
 }
 
 
