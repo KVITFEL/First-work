@@ -22,6 +22,17 @@ void zadanie2()
 	printf("%.1f", x <= 13 ? (pow(-x, 3) + 9) : (-(3/ (x+1))));
 }
 
+void zadanie3() {
+  int yeas;
+	puts("Введите год:");
+	scanf("%d", &yeas);
+
+	if (yeas % 4 == 0 && yeas % 100 != 0 || yeas % 400 == 0)
+		printf("В %d году - 366 дней", yeas);
+	else
+		printf("В %d году - 365 дней", yeas);
+
+
 
 void main()
 {
