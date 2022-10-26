@@ -34,14 +34,12 @@ void zadanie2()
 
 }
 
-
 void zadanie3()
 {
- double sum=0.0;
-	for(double x = 1; x <=2; x += 0.1){
-	    //printf("%f\n",sum);
+ double sum=0.;
+	for(double x = 1; x < 2.1; x += 0.1){
 	    sum = sum + sin(x);
-	
+	    printf("sin %.1f = %f\n",x,sum);
 	}
 printf("Сумма синусов = %f", sum);
 }	
