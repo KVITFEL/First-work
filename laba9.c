@@ -19,23 +19,55 @@ void zadanie1() {
 }
 
 
-void zadanie2() {
+void zadanie3() {
+	while (1)
 
-	int row, col, count = 0;
-	printf("\n");
-	for (row = 1; row <= 5; ++row) {
-		count = 0;
-		for (col = 1; col <= 5; col++) {
-			((col % 2 != 0) && (col != row)) ? printf("%5d", row-1) : printf("%5d", row - col);
-			if ((row - col) == 0) break;
+	{
+
+		char a;
+
+		// Решение домашней задачи
+
+		printf("Продолжить ? (Да - y, нет - n)");
+
+		if ((a = getchar()) == 'n') break;
+		else{	float x = 2.06, y = 0;
+
+
+		// esli x == 63 ili 64 to == 0
+		long double sum1 = 1, sum2 = 1;
+
+		for (int i = 1; i < 64; i += 2) {
+			y = x - i;
+			sum1 *= y;
+			printf("x - %i | %.2f - %i = %f | %.5f\n", i, x, i, y, sum1);
+			y = 0;
 		}
-		printf("\n");
+		for (int i = 2; i < 65; i += 2) {
+			y = x - i;
+			sum2 *= y;
+			printf("x - %i | %.2f - %i = %f | %.5f\n", i, x, i, y, sum2);
+			y = 0;
+		}
+		printf("%.5f\n", sum1 / sum2);
+		}
 	}
 }
 
+void zadanie4() {
+	int r;
+  scanf("%i", &r);
+	printf("\n");
+	for (int i = 1; i <= r; ++i) {
+		for (int i = 1; i <= r; ++i) {
+			printf("* ");
+		}
+		printf("\n");
+	}
 
+}
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
-	zadanie1();
+	zadanie4();
 }
