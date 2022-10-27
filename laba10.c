@@ -38,3 +38,17 @@ void main()
 		printf("| %lf ", sin((sin_n(qt, 1) * M_PI) / 180)); if (sin((sin_n(qt, 1) * M_PI) / 180) >= 0) balans(0, 1);
 		printf("| %lf \n", sin((-1) * (sin_eps(qt, 1) * M_PI) / 180));
 	}
+void zadanie10_3()
+{	//Фигура - произвольный треугольник
+	float a, b, c;//стороны треугольника
+	double p,s;//полупериметр и площадь
+	puts("VVedite ctorony a");
+	scanf("%f", &a);
+	puts("VVedite ctorony b");
+	scanf("%f", &b);
+	puts("VVedite ctorony c");
+	scanf("%f", &c);
+	p = (a + b + c) / 2;
+	s = sqrt(p*(p - a)*(p - b)*(p - c));
+	printf("%f", s);
+}
