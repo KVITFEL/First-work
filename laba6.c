@@ -36,15 +36,14 @@ void zadanie3() {
 	
 	
 void zadanie_home()
-{
+{	//14 вариант
     double x, y;
-    printf("x = "); scanf("%f", &x);
-    printf("y = "); scanf("%f", &y);
+    printf("x = "); scanf("%lf", &x);
+    printf("y = "); scanf("%lf", &y);
     if (x*x/pow(3.5,2) + y*y/pow(4,2) >= 1 && x*x/pow(5.75,2) + y*y/pow(6,2) <= 1 && 2<=y<=6)
         printf("Входит");
     else
         printf("Не входит");
-    return 0;
 }
 
 
@@ -52,5 +51,5 @@ void zadanie_home()
 void main()
 {
 	setlocale(LC_ALL, "ru-RU");
-	zadanie1();
+	zadanie_home();
 }
