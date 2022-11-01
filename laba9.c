@@ -18,8 +18,21 @@ void zadanie1() {
 	printf("\n");
 }
 
+void zadanie3(int c, char sim)
+{
+ for (int i = 1; i <= c; i++)
+ {
+  for (int j = 1; j <= c; j++)
+   if (j == c || i == c || i == c - j + 1)
+    putchar(sim);
+   else
+    putchar(' ');
+  putchar('\n');
+ }
+ return 0;
+}
 
-void zadanie3()
+void zadanieproverka()
 {
     int i;
     int j = 0;
