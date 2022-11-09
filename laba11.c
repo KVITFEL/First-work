@@ -29,7 +29,7 @@ void main()
 		for (float i = a; i < b; i += a) {
 			cnt += 1;
 			A[cnt-1] = pow(i, 2) + 2 * M_PI * cos(M_PI) * i;
-			//printf("%i %.1f %lf \n", cnt, i, A[cnt-1]);
+			printf("%i %.1f %lf \n", cnt, i, A[cnt-1]);
 		}
 	}
 
