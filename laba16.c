@@ -12,7 +12,7 @@ void zadanie_individual();
 
 void main() {
 	setlocale(LC_ALL, "");
-	zadanie_individual();
+	zadanie1();
 
 }
 
@@ -139,80 +139,45 @@ void zadanie2() {
 
 }
 
+
+
+
+//Массив d0, d1, d2, ..., dh, приняв в качестве первых его элементов все
+//положительные элементы массива а0, а1, а2, ..., an с сохранением порядка их
+//следования, а в качестве остальных элементов все отрицательные элементы
+//b0, b1, b2 ..., bm в обратном порядке.
+
 void zadanie_individual() {
 
 	srand(time(0));
-	double* a,*b,*c,*d, summa_c=0;
-	int size,size_d, i,q;
-	size = 10 + rand() % 50;
-	size_d = size * 2 +1;
-	a = (double*)malloc(size_d * sizeof(double));
-	b = (double*)malloc(size_d * sizeof(double));
-	c = (double*)malloc(size * sizeof(double));
-	d = (double*)malloc(size_d * sizeof(double));
-	printf("Массив a: ");
-	printf("\n");
+	int size, i;
+	size = -10 + rand() % 50;
+
+	double* a = (double*)malloc(size * sizeof(double));
+	double* b = (double*)malloc(size * sizeof(double));
+	for (i = 0; i < size; i++) {
+		a[i] = i;
+		printf("a[%d] %lf \n", i, a[i]);
+	}printf("\n");
+	for (i = 0; i < size; i++) {
+		b[i] = i;
+		printf("b[%d] %lf \n", i, b[i]);
+	}printf("\n");
+
+	double* d = (double*)malloc((size * 2) * sizeof(double));
 
 	for (i = 0; i < size; i++) {
-		a[i] = -100 + rand() % (100 + 100 + 1);
-		printf("%.2lf ", a[i]);
-
-	}
-	printf("\n");
-	printf("\n");
-	printf("Массив b: ");
-	printf("\n");
-	for (i = 0; i < size; i++) {
-		b[i] = -100 + rand() % (100 + 100 + 1);
-		printf("%.2lf ", b[i]);
-
-	}
-	printf("\n");
-	printf("\n");
-	printf("Массив c: ");
-	printf("\n");
-	for (i = 0; i < size; i++) {
-		c[i] = -100 + rand() % (100 + 100 + 1);
-		printf("%.2lf ", c[i]);
-
-	}
-	printf("\n");
-	printf("\n");
-	for (i = 0; i <= size_d; i++) {
-		if (i >= size) 
-			a[i] = 0;
-	}
-
-
-	//массив b в обратном порядке
-	for (int i = 0; i <size; i++) {
-		b[i] = b[size - i - 1]; 
-		summa_c = summa_c + c[i];
-	}
-	printf("\n");
-	printf("\n");
-	printf("Массив b izm: ");
-	for (i = 0; i <= size_d; i++) {
-		if (i <= size)
-			b[i] = 0;
-		if (i > size)
-			b[i + size] = b[i];
-		printf("%.2lf ", b[i]);
-	}
-	
-
-	printf("\n");
-	printf("\n");
-	printf("Массив d: ");
-	printf("\n");
-
-
-	for (i = 0; i < size; i++) {
-
 		d[i] = a[i];
 	}
-	
-		}
 
+	for (int i = size - 1; i >= 0; i--) {
+		d[size + i] = b[size - i - 1];
+	}
+	for (int i = 0; i < size * 2; i++) {
+		b[i] = i;
+		printf("d[%d] %lf \n", i, d[i]);
+	}
 
-
+	system("pause");
+	return 0;
+}
