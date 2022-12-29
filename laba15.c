@@ -6,7 +6,7 @@
 
 void zadanie1();
 void zadanie2();
-void zadanie3();
+void zadanie_individual();
 
 
 
@@ -18,50 +18,73 @@ void main() {
 
 void zadanie1() {
 
-	
-	double a[10][10];
+
+	double a[15][15];
 	int i, j, n, m;
 	double z, drob = 0;
 	printf("Введите количество строк :");
 	scanf("%d", &n);
 	printf("Введите количество столбцов: ");
 	scanf("%d", &m);
-	if (!(n < 10) || !(m < 10)) return;
-	// Ввод элементов массива
+	
+	for (i = 0; i < m; i++)
+		printf("   %d  ", i);
+	
+	printf("\n");
 	for (i = 0; i < n; i++) // цикл по строкам
 	{
 		for (j = 0; j < m; j++) {// цикл по столбцам
 
-
+			
 			drob = ((float)j) / 10;
 			z = i + drob;
 			a[i][j] = z;
-			printf("a[%d][%d]=%.1lf  ", i, j, a[i][j]);
+			
+			if (a[i][j] == a[n - 2][j])
+				a[i][j] = a[i][j] - (a[i][j] * 2);
 
+
+			if (a[i][j] == a[i][0] )
+			printf("%d %.1lf  ", i, a[i][j]);
+			else
+				printf(" %.1lf  ", a[i][j]);
+
+			
+				
+		
 
 		}
 
 		printf("\n");
 	}
-
 	printf("\n");
+
+
+
+
 
 	int max_i = 0, max_j = 0, stolbik;
 	printf("Введите номер столбца:");
 	scanf("%d", &stolbik);
 	printf("\n");
-	
+
 	for (i = 0; i < n; i++) // цикл по строкам
 	{
 		for (j = 0; j < m; j++) {// цикл по столбцам
-
-			if ((i == n - 1) && (j == m - 1))
-				printf("Элемент, расположенный в правом нижнем углу массива: a[%d][%d]=%.1lf \n", n - 1, m - 1, a[i][j]);
-			if ((i == n - 1) && (j == stolbik-1))
-				printf("Максимальный элемент в [%d] столбце=%.1lf \n",  stolbik, a[i][j]);
+			if ((i == n - 1) && (j == stolbik-1 ))
+				printf("Максимальный элемент в [%d] столбце = %.1lf \n", stolbik, a[i][j]);
 		}
 	}
+
+
+
+
+\
+
+
+
 }
+
 
 void zadanie2()
 {
@@ -111,8 +134,8 @@ void zadanie2()
 
 		printf("\n");
 	}
-	
-	
+
+
 	printf("\n");
 
 	int sum = 0;
@@ -158,7 +181,7 @@ void zadanie2()
 
 }
 
-void zadanie3() {
+void zadanie_individual() {
 	srand(time(0));
 	int students[8][5];
 	int i, j, n, m;
@@ -169,30 +192,24 @@ void zadanie3() {
 	{
 		for (j = 0; j < 5; j++) {// цикл по столбцам
 
-			students[i][j] =  + rand() % 30+10;
+			students[i][j] = +rand() % 30 + 10;
 			printf("Группа %d = %d | ", i + 1, students[i][j]);
-			
+
 		}
 
 		printf("\n");
 	}
 	printf("\n");
 
-	double summa=0, sr_students;
+	double summa = 0, sr_students;
 	for (i = 0; i < 8; i++) // цикл по строкам
 	{
 		summa = students[i][2] + summa;
-		
+
 	}
 	printf("\n");
-	
-	printf("Среднее число студентов на 3 курсе = %.2lf", summa/8);
+
+	printf("Среднее число студентов на 3 курсе = %.2lf", summa / 8);
 
 }
-
-
-
-
-
-
 
